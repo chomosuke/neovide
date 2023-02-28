@@ -421,7 +421,7 @@ end
 <pre><code class="language-vim">set guifont=Source\ Code\ Pro:h14
 </code></pre>
 <p>Lua:</p>
-<pre><code class="language-lua">vim.opt.guifont = { &quot;Source Code Pro&quot;, &quot;h14&quot; } -- text below applies for VimScript
+<pre><code class="language-lua">vim.o.guifont = &quot;Source Code Pro:h14&quot; -- text below applies for VimScript
 </code></pre>
 <p>Controls the font used by Neovide. Only setting which is actually controlled through an option, and
 as such it's also documented in <code>:h guifont</code>. But to sum it up and also add Neovide's extension:</p>
@@ -503,7 +503,7 @@ let g:neovide_background_color = '#0f1117'.printf('%x', float2nr(255 * g:transpa
 <p>Lua:</p>
 <pre><code class="language-lua">-- Helper function for transparency formatting
 local alpha = function()
-  return string.format(&quot;%x&quot;, math.floor(255 * vim.g.neovide_transparency_point or 0.8))
+  return string.format(&quot;%x&quot;, math.floor(255 * vim.g.transparency or 0.8))
 end
 -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
 vim.g.neovide_transparency = 0.0
