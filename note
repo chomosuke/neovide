@@ -1,0 +1,10 @@
+First goal: make first line of the window not scroll
+
+Current goal: If winbar is enabled, make it not scroll
+
+Approach:
+Change RenderedWindow to animate the top line seperately.
+
+Find out if a window have winbar via `vim.wo.winbar`
+
+Find out if a window have border via `vim.api.nvim_win_get_config(0).border`
